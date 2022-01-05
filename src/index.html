@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Weather App</title>
 </head>
 <body>
     <div id='weather-info-container'>
-    
+        <p id='weather-location'>Tokyo</p>
+        <p id='weather-date'>Tuesday, 4th Jan '22</p>
+        <p id='weather-time'>11:38 am</p>
+        <p id='weather-description'>Few Clouds</p>
+        <img id='weather-icon'></img>
+        <p id='weather-temperature'>51 °F</p>
+        <div id='weather-info-main-container'>
+            <div id='feels-like-container'>
+                <i class="fas fa-temperature-low"></i>
+                <p id='feels-like-title'>Feels Like</p>
+                <p id='feels-like-data'>48 °F</p>
+            </div>
+            <div id='humidity-container'>
+                <i class='fas fa-water'></i>
+                <p id="humidity-title">Humidity</p>
+                <p id='humidity-data'>43 %</p>
+            </div>
+            <div id="wind-speed-container">
+                <i class='fas fa-wind'></i>
+                <p id="wind-speed-title">Wind Speed</p>
+                <p id="wind-speed-data">2 mph</p>
+            </div>
+        </div>
     </div>
     <form id='weather-form'>
         <input type="text" id='location-input' placeholder="Search location.">
