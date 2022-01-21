@@ -1,0 +1,183 @@
+@import url(https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap);
+body{
+    min-height: 100vh;
+    background-image: url(dcc123af7d945827a1f9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+#background-cover{
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#weather-info-container{
+    padding-inline: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+#weather-location{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+#weather-date,#weather-time, #weather-description{
+    margin: 0;
+    font-size: 0.8em;
+}
+#weather-temperature{
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-top:10px;
+    margin-bottom:0;
+}
+
+#weather-description{
+    margin-top: 5px;
+}
+
+#weather-info-main-container{
+    margin-top: 20px;
+}
+
+#feels-like-container, #humidity-container, #wind-speed-container{
+    display: flex;
+}
+
+#feels-like-container div, #humidity-container div, #wind-speed-container div{
+    margin-left: 10px;
+}  
+
+#feels-like-title, #humidity-title, #wind-speed-title{
+    font-size: 0.8em;
+    margin: 0;
+}
+
+#feels-like-data, #humidity-data, #wind-speed-data{
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#weather-form-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#weather-form{
+    display: inline;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+#location-input{
+    background: none;
+    border:none;
+    padding-left: 10px;
+    color: white;
+}
+#location-input::placeholder{
+    color: white;
+    opacity: 1;
+}
+  
+#location-input:-ms-input-placeholder{
+    color: white;
+}
+  
+#location-input::-ms-input-placeholder{
+    color: white;
+}
+
+#search-btn{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+footer{
+    text-align: center;
+}
+footer p{
+    font-size: 0.8em;
+    margin: 0;
+}
+.fab{
+    color: white;
+    padding: 12px;
+}
+
+#loader-container{
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader{
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #576574; 
+    border-bottom: 8px solid #576574;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media only screen and (min-width: 750px) {
+    #weather-form-container{
+        justify-content: start;
+        margin-left: 50px;
+    }
+    #weather-info-container{
+        padding-inline: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #weather-location{
+        font-size: 2em;
+    }
+    #weather-date,#weather-time, #weather-description, #feels-like-title, #humidity-title, #wind-speed-title{
+        font-size: 1em;
+    }
+
+    #weather-temperature{
+        font-size: 3em;
+    }
+    #weather-icon{
+        width: 75px;
+    }
+    #feels-like-data, #humidity-data, #wind-speed-data{
+        font-size: 1.3em;
+    }
+    .fas{
+        font-size: 1.3em;
+    }
+    footer p{
+        font-size: 1em;
+    }
+}
