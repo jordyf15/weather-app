@@ -61,12 +61,19 @@ function displayData(weatherData) {
     windSpeed.textContent = `${weatherData.wind.speed} km/h`;
 }
 
+async function init() {
+    const weatherData = await getWeatherData('tokyo');
+    displayData(weatherData);
+}
+
 const weatherForm = document.querySelector('#weather-form');
 const locationInput = document.querySelector('#location-input');
 weatherForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const location = locationInput.value;
     const weatherData = await getWeatherData(location);
-    console.log(weatherData);
+    // console.log(weatherData);
     displayData(weatherData);
 });
+
+init();
