@@ -123,6 +123,32 @@ footer p{
     padding: 12px;
 }
 
+#loader-container{
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader{
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #576574; 
+    border-bottom: 8px solid #576574;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 @media only screen and (min-width: 750px) {
     #weather-form-container{
         justify-content: start;

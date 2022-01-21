@@ -65,14 +65,36 @@ async function init() {
     const weatherData = await getWeatherData('tokyo');
     displayData(weatherData);
 }
+function renderLoading() {
+    const loaderContainer = document.createElement('div');
+    loaderContainer.id = 'loader-container';
+    const body = document.querySelector('body');
+    body.appendChild(loaderContainer);
+
+    const loader = document.createElement('div');
+    loader.id = 'loader';
+    loaderContainer.appendChild(loader);
+
+    const loadingText = document.createElement('p');
+    loadingText.id = 'loader-text';
+    loadingText.textContent = 'Please wait while fetching data...';
+    loaderContainer.appendChild(loadingText);
+}
+
+function removeLoader() {
+    const body = document.querySelector('body');
+    const loaderContainer = document.querySelector('#loader-container');
+    body.removeChild(loaderContainer);
+}
 
 const weatherForm = document.querySelector('#weather-form');
 const locationInput = document.querySelector('#location-input');
 weatherForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const location = locationInput.value;
+    renderLoading();
     const weatherData = await getWeatherData(location);
-    // console.log(weatherData);
+    removeLoader();
     displayData(weatherData);
 });
 
