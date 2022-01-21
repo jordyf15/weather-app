@@ -29,7 +29,6 @@ h1{
     height: 100vh;
 }
 #weather-info-container{
-    /* padding-left: 15px; */
     padding-inline: 15px;
     display: flex;
     justify-content: space-between;
@@ -122,4 +121,38 @@ footer p{
 .fab{
     color: white;
     padding: 12px;
+}
+
+@media only screen and (min-width: 750px) {
+    #weather-form-container{
+        justify-content: start;
+        margin-left: 50px;
+    }
+    #weather-info-container{
+        padding-inline: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #weather-location{
+        font-size: 2em;
+    }
+    #weather-date,#weather-time, #weather-description, #feels-like-title, #humidity-title, #wind-speed-title{
+        font-size: 1em;
+    }
+
+    #weather-temperature{
+        font-size: 3em;
+    }
+    #weather-icon{
+        width: 75px;
+    }
+    #feels-like-data, #humidity-data, #wind-speed-data{
+        font-size: 1.3em;
+    }
+    .fas{
+        font-size: 1.3em;
+    }
+    footer p{
+        font-size: 1em;
+    }
 }
