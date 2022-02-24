@@ -17,7 +17,7 @@ https://jordyf15.github.io/weather-app/
 Input the following command one-by-one to the terminal.
 ```
     git clone https://github.com/jordyf15/weather-app.git
-    cd todo-list
+    cd weather-app
     npm i
 
     // To run build for production
